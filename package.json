@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "mdx-deck src/slides/main.mdx",
+    "format": "yarn prettier-eslint -- --write 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "@m6web/eslint-plugin-react": "^3.0.0",
+    "mdx-deck": "^1.1.0",
+    "react": "^16.4.1",
+    "styled-components": "^3.3.3"
+  }
+}
