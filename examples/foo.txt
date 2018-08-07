@@ -1,0 +1,2 @@
+Foo file content
+All the content is used to generate the sha1
