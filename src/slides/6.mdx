@@ -1,0 +1,106 @@
+# Git
+#### Chapitre 6
+
+---
+
+# Tips
+* bonnes partiques
+* workflow front M6
+* partir d'une autre branche
+* trucs et astuces
+
+---
+
+## Bonnes partiques
+
+* les messages de commits
+* un titre
+* une description
+
+---
+
+## Workflow front M6
+
+* on évite les merges (repos spagettis)
+* dans github : squash and merge
+* squash d'abord les commits
+* puis rebase le commit sur la branche pour le merger
+
+---
+
+## Partir d'une autre branche
+
+* quand on a besoin d'un dev non fini
+* lors que la branche de départ évolue
+* rebase onto
+
+---
+
+import RebaseOnto from '../components/repos/rebaseOnto2';
+
+<RebaseOnto />
+
+---
+
+## Trucs et astuces
+
+```sh
+[alias]
+        co = checkout
+        st = status
+        lou = log --oneline --color --decorate --graph
+        lol = log --oneline --color --all --decorate --graph
+        brd = branch -D
+        loun = log --oneline --color --decorate --graph -n 10
+        loln = log --oneline --color --all --decorate --graph -n 10
+        cob = checkout -b
+```
+---
+
+## Trucs et astuces
+
+* les hooks de prepush et precommit
+* `repo/.git/pre-commit` appelé juste avant la création du commit
+* idéal pour reformarter votre code
+* `repo/.git/pre-push` appelé juste avant l'appel reseau
+* idéal pour vérifier le lint et passer les tests
+
+---
+
+## Trucs et astuces
+
+* RAZ de master lorsqu'on est pas deçu
+```sh
+git fetch && git branch -f master origin/master
+```
+* RAZ de master lorsqu'on est deçu
+```sh
+git fetch && git reset --hard origin/master
+```
+* le mieux est encore de ne pas avoir de master local
+
+---
+
+## Trucs et astuces
+
+* les branches, les tags, même les commits, c'est gratuit, abusez-en !
+* je suis pas sur de ce que je vais faire :thinking_face:
+```sh
+git branch old
+```
+* j'ai vraiment tout cassé sans placer de point de retour :sob:
+```sh
+git reflog
+```
+
+---
+
+## Trucs et astuces
+
+* la doc ultime (même en FR)
+
+https://git-scm.com/book/fr/v2
+
+---
+
+# Questions ?

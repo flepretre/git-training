@@ -1,0 +1,68 @@
+# Git
+#### Chapitre 1
+
+---
+
+# Les espaces git
+
+* local
+* working directory
+* l'index
+
+---
+
+## local
+
+* Git est un systeme de versionning distribué
+* chaque clone du repository est autonome
+* la majeure partie des commande git ne font pas de réseau
+
+```notes
+- qu'est-ce que le versioning
+- pourquoi versioner
+- versioning distribué
+```
+
+---
+
+## local
+
+* pour créer un repo git en local
+
+```sh
+git init
+```
+
+* crée un répertoir `.git` qui va contenir toute la config git
+
+---
+
+## working directory
+
+* la racine de votre repo est le working directory
+* il représente l'état courant du code
+* lors qu'il est modifié, git détecte les différences
+
+```sh
+git diff
+```
+
+---
+
+## l'index
+
+* zone dans laquelle git référence les changements à commiter
+
+```sh
+git status
+```
+
+* pour ajouter des changements dans l'index
+
+```sh
+git add [<options>...] [<pathspec>...]
+```
+
+```notes
+- possibilité d'ajouter ligne par ligne
+```

@@ -1,0 +1,105 @@
+# Git
+#### Chapter 3
+
+---
+
+# Les réferences
+
+* log
+* HEAD
+* branches
+* tags
+* stash
+
+```notes
+- git fonctionne par référence pour
+-- le working directory
+-- les branches
+```
+
+---
+
+## log
+* pour observer le graph
+
+```sh
+git log
+git log --oneline --decorate --graph master foo bar
+git log --oneline --decorate --graph --all
+```
+
+---
+
+## HEAD
+
+* HEAD référence la branche sur lequel votre working directory est basé
+
+```sh
+git checkout foo
+```
+
+---
+
+## branches
+
+* pointe sur un commit
+* la branche courante est celle sur laquelle pointe HEAD
+* lors d'un commit la branche courante est déplacée sur le sha1 du nouveau commit
+
+---
+
+## branches
+
+```sh
+git branch foo
+git checkout foo
+git branch -m bar
+```
+
+---
+
+import Branch from '../components/repos/branch';
+
+<Branch />
+
+---
+
+## tags
+
+* comme une branche, mais ne peux être déplacé
+
+---
+
+## tags
+
+```sh
+git tag v1.0.0
+git tag -d v1.0.0
+```
+
+---
+
+## stash
+
+* stack (filo)
+* versionne ce qui est ajouté à l'index
+* et ce qui est modifié mais non ajouté
+
+---
+
+## stash
+
+```sh
+git stash save "I name my stash 'cause I'm a clean dev"
+git stash list
+git stash show @{2}
+git stash apply
+git stash pop
+git stash drop
+```
+
+---
+
+import Stash from '../components/repos/stash';
+
+<Stash />

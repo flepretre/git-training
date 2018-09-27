@@ -1,0 +1,85 @@
+# Git
+#### Chapitre 5
+
+---
+
+# Le réseau
+
+* remote
+* fetch
+* push
+* pull
+
+---
+
+## Le réseau
+
+Tout ce qu'on a vu jusqu'à présent est 100% offline
+
+---
+
+## remote
+
+* permet de définir les urls pour des repos distant
+* il est possible d'avoir deux repos differents pour le fetch et le push
+* il est possible d'avoir plusieurs repos distant
+
+---
+
+## remote
+
+```sh
+git remote -v
+git remote add flepretre https://github.com/flepretre/m6git
+git remote set origin https://github.m6web.fr/m6web/m6git
+```
+
+---
+
+## fetch
+
+* récupère l'état des repos distants
+* fait progresser les branches distantes (origin/toto)
+* permet aussi de récupérer les tags
+* n'a aucun impact sur les branches locales
+
+---
+
+## fetch
+
+```sh
+git fetch
+git fetch flepretre
+git fetch --tags
+git fetch --prune
+```
+
+---
+
+## push
+
+* pousse des commits sur un repo distant
+* fait progresser la branche distante
+* échoue si la progression de la branche n'est pas fast-forward
+
+---
+
+## push
+
+```sh
+git push origin master
+git push origin master~:master -f
+git push origin --tags
+git push origin :toto -f
+```
+
+---
+
+## pull
+
+* fait un fetch suivit d'un merge
+* :warning: par défaut, si le merge est non fast-forward, un commit de merge est créé
+
+```notes
+il existe un git pull --rebase mais il vaut mieux savoir faire ça manuellement d'abord
+```

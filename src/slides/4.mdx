@@ -1,0 +1,101 @@
+# Git
+#### Chapitre 4
+
+---
+
+# Les opérations de branch
+
+* cherry-pick
+* merge
+* rebase
+
+---
+
+## Cherry-pick
+
+* permet de récupérer des commits sur la branche courante
+* les commits sont dupliqués
+* la branche courante progresse
+* risque de conflits
+* en cas de conflits, la résolution se trouve dans le commit récupéré
+* si le commit est vide (pas de diff car le code est déjà présent), il est ignoré
+
+---
+
+## Cherry-pick
+
+```sh
+git cherry-pick toto ad123edf
+```
+
+---
+
+import CherryPick from '../components/repos/cherryPick'
+
+<CherryPick />
+
+---
+
+## Merge
+
+* permet de fusioner des branches
+* notion de fast-forward
+* si fast-forward, déplace simplement la branche courante
+* si non fast-forward, crée un commit avec plusieurs parents
+  (commit de merge)
+* risque de conflits
+* en cas de conflits, la résolution se trouve dans le commit de merge
+
+---
+
+## Merge
+
+```sh
+git merge foo
+git merge foo --ff-only
+git merge foo --no-ff
+```
+
+---
+
+import MergeFf from '../components/repos/mergeff';
+
+<MergeFf />
+
+---
+
+import Merge from '../components/repos/merge';
+
+<Merge />
+
+---
+
+## Rebase
+
+* déplace une branche
+* tous les commits sont dupliqués à leur nouvelle position
+  (car immuables)
+* risque de conflits
+* en cas de conflits, la résolution se trouve dans le commit récupéré
+* si le commit est vide (pas de diff car le code est déjà présent), il est ignoré
+
+---
+
+## Rebase
+
+```sh
+git rebase foo
+git rebase foo -i
+git rebase foo -i --autosqash
+git rebase --onto foo HEAD~2 bar
+```
+---
+
+import Rebase from '../components/repos/rebase';
+
+<Rebase />
+---
+
+import RebaseOnto from '../components/repos/rebaseOnto';
+
+<RebaseOnto />

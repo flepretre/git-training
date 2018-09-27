@@ -1,0 +1,79 @@
+import Blob from '../components/Blob.example';
+import Tree from '../components/Tree.example';
+import Commit from '../components/Commit.example';
+
+# Git
+#### Chapitre 2
+
+---
+
+# Les objets Git
+
+* sha1
+* blob
+* tree
+* commit
+* tag
+
+---
+
+## Le sha1
+
+Il permet d'identifier les éléments git
+* peu de colisions
+* chaque contenu son sha1
+* chaque sha1 son contenu
+* les objets git sont immuables
+
+---
+
+## Le blob
+
+* l'objet de base Git
+* contient du contenu text
+* calcule le sha1 du contenu
+
+```sh
+git cat-file -p <sha1>
+```
+
+---
+
+<Blob />
+
+---
+
+## Le tree
+
+* permet de coder un noeud de l'arborescence de fichiers
+* il peut référencer un blob, ou un autre tree
+* calcule le sha1 correspondant au noeud de l'arbre
+
+---
+
+<Tree />
+
+---
+
+## Le commit
+
+* état du code à un instant T
+* liste chainé enfant -> parent
+* le sha1 est calculé via
+* le tree représentant la racine du repertoire (l'index)
+* les métas du commit (autheur, date, message ...)
+
+---
+
+<Commit />
+
+---
+
+## Le commit
+
+```sh
+git add .
+
+git commit -m "Example files for blob, tree, and commit" -m "Commit description"
+```
+
