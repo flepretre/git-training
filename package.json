@@ -1,12 +1,17 @@
 {
-  "scripts": {
-    "start": "mdx-deck src/slides/main.mdx",
-    "format": "yarn prettier-eslint -- --write 'src/**/*.js'"
-  },
   "devDependencies": {
-    "@m6web/eslint-plugin-react": "^3.0.0",
-    "mdx-deck": "^1.1.0",
-    "react": "^16.4.1",
-    "styled-components": "^3.3.3"
+    "@m6web/eslint-plugin-react": "3.0.0",
+    "mdx-deck": "1.7.7",
+    "react": "16.5.2",
+    "styled-components": "3.4.9"
+  },
+  "dependencies": {
+    "lodash": "4.17.11",
+    "react-live": "1.11.0"
+  },
+  "scripts": {
+    "build": "mdx-deck build src/deck.js -d ./docs/ --title index",
+    "format": "yarn prettier-eslint -- --write 'src/**/*.js'",
+    "start": "mdx-deck src/deck.js"
   }
 }
