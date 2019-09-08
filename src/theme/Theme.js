@@ -4,11 +4,10 @@ export const theme = {
   ...t,
   css: {
     ...t.css,
-    'background-image': `url(https://github.com/flepretre/m6git/raw/master/src/assets/background.png)`,
+    'background-image': `url(https://github.com/flepretre/m6git/raw/master/src/assets/background-git.png)`,
     'background-position': 'center',
     'background-repeat': 'no-repeat',
     'background-size': 'cover',
-    'background-color': 'rgba(0, 0, 0, 0.5)',
     li: {
       'text-align': 'left',
     },

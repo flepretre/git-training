@@ -4,6 +4,5 @@
 
 Lancer les slides :
 ```sh
-yarn start
+yarn start -p [PORT]
 ```
-
