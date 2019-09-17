@@ -17,9 +17,9 @@ export default () => (
       <div>parent</div>
       <div>9034352a174023326ff1720dd78ec211c0a31ac1</div>
       <div>author</div>
-      <div>Florent Lepretre florent.lepretre@gmail.com1533635024 +0200</div>
+      <div>Florent Lepretre florent.lepretre@m6.fr 1533635024 +0200</div>
       <div>committer</div>
-      <div>Florent Lepretre florent.lepretre@gmail.com 1533635024 +0200</div>
+      <div>Florent Lepretre florent.lepretre@m6.fr 1533635024 +0200</div>
     </Grid>
     Example files for blob, tree, and commit<br />
     <br />

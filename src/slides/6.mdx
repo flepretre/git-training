@@ -5,7 +5,6 @@
 
 # Tips
 * bonnes partiques
-* workflow front M6
 * partir d'une autre branche
 * trucs et astuces
 
@@ -19,33 +18,19 @@
 
 ---
 
-## Workflow front M6
+## Workflow 
 
-* on évite les merges (repos spagettis)
-* dans github : squash and merge
-* squash d'abord les commits
-* puis rebase le commit sur la branche pour le merger
-
----
-
-## Workflow front M6
-
-* X commits dans une PR
-* squash merge de la PR sur master (1 commit)
-* une fois suffisament de PR mergées on tag
-* on ne déploie que les tags en prod
+* gitflow
+* github flow
+* semver
 
 ---
 
-## Workflow front M6
+## Outils
 
-* le semver correspond à différentes branches de tag :thinking_face:
-
----
-
-import Tags from '../components/repos/tags'
-
-<Tags />
+* maitrisez git en ligne de commande
+* git kraken
+* votre IDE
 
 ---
 
@@ -90,21 +75,21 @@ import RebaseOnto from '../components/repos/rebaseOnto2';
 
 ## Trucs et astuces
 
-* RAZ de master lorsqu'on est pas deçu
+* RAZ de master lorsqu'on est pas dessus
 ```sh
 git fetch && git branch -f master origin/master
 ```
-* RAZ de master lorsqu'on est deçu
+* RAZ de master lorsqu'on est dessus
 ```sh
 git fetch && git reset --hard origin/master
 ```
-* le mieux est encore de ne pas avoir de master local
+* le mieu est encore de ne pas avoir de master local
 
 ---
 
 ## Trucs et astuces
 
-* les branches, les tags, même les commits, c'est gratuit, abusez-en !
+* les branches, les tags, même les commits, c'est gratuit, abusez en !
 * je suis pas sur de ce que je vais faire :thinking_face:
 ```sh
 git branch old
