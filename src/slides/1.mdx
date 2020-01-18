@@ -8,6 +8,7 @@
 * local
 * working directory
 * l'index
+* la config
 
 ---
 
@@ -66,3 +67,32 @@ git add [<options>...] [<pathspec>...]
 ```notes
 - possibilité d'ajouter ligne par ligne
 ```
+
+---
+
+## La config
+
+* il est possible de configurer certaines variables de git
+```sh
+git config user.email foo@bar.fr
+git config user.nam "foo bar"
+```
+
+---
+
+## La config
+
+* la config de chaque repo est disponible dans le fichier ".git/config"
+* il est aussi possible de configurer un fichier de config globale
+
+---
+
+## TP 1
+
+* initialiser un repo
+```sh
+git init [nom du repo]
+
+```
+
+* configurer son nom et addresse mail

@@ -5,9 +5,27 @@
 
 # Les opérations de branch
 
+* reset
 * cherry-pick
 * merge
 * rebase
+
+---
+
+## Reset
+
+* permet de remettre le pointeur d'une branche sur un certain commit
+* les modifications peuvent être concervés sur le working directory (soft)
+* les modifications peuvent être supprimés (hard)
+
+---
+
+## Reset
+
+```sh
+git reset master
+git reset --hard master
+```
 
 ---
 
@@ -94,8 +112,41 @@ git rebase --onto foo HEAD~2 bar
 import Rebase from '../components/repos/rebase';
 
 <Rebase />
+
 ---
 
 import RebaseOnto from '../components/repos/rebaseOnto';
 
 <RebaseOnto />
+
+---
+
+## TP 4
+
+* faire un reset de master sur le premier commit du repo
+* créer une branche A sur master et faire un cherry-pick du dernier commit de la branche précédente
+
+---
+
+## TP 4
+
+* ajouter un nouveau fichier avec du contenu sur une nouvelle branche B basée sur master
+* merger la branche A dans la branche B
+* créer un branche C sur master, et créer le même fichier que la branche B mais avec un contenu différent
+* merger B dans C
+
+---
+
+## TP 4
+
+* à l'aide de la commande reset supprimer le dernier commit de la branch B tout en gardant le contenu
+* remettre les branche B et C à leur état avant les merges de l'exercice précédent
+
+---
+
+## TP 4
+
+* faire un rebase de B sur A
+* faire un rebase de C sur B
+* faire un rebase de C sur master sans embarquer les commits de B 
+
